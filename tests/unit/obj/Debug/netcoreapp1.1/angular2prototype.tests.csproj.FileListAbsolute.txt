@@ -1,0 +1,12 @@
+C:\Projects\Centric\angular2prototype\tests\unit\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Projects\Centric\angular2prototype\tests\unit\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Projects\Centric\angular2prototype\tests\unit\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Projects\Centric\angular2prototype\tests\unit\bin\Debug\netcoreapp1.1\angular2prototype.tests.deps.json
+C:\Projects\Centric\angular2prototype\tests\unit\bin\Debug\netcoreapp1.1\angular2prototype.tests.runtimeconfig.json
+C:\Projects\Centric\angular2prototype\tests\unit\bin\Debug\netcoreapp1.1\angular2prototype.tests.runtimeconfig.dev.json
+C:\Projects\Centric\angular2prototype\tests\unit\bin\Debug\netcoreapp1.1\angular2prototype.tests.dll
+C:\Projects\Centric\angular2prototype\tests\unit\bin\Debug\netcoreapp1.1\angular2prototype.tests.pdb
+C:\Projects\Centric\angular2prototype\tests\unit\obj\Debug\netcoreapp1.1\angular2prototype.tests.csprojResolveAssemblyReference.cache
+C:\Projects\Centric\angular2prototype\tests\unit\obj\Debug\netcoreapp1.1\angular2prototype.tests.AssemblyInfo.cs
+C:\Projects\Centric\angular2prototype\tests\unit\obj\Debug\netcoreapp1.1\angular2prototype.tests.dll
+C:\Projects\Centric\angular2prototype\tests\unit\obj\Debug\netcoreapp1.1\angular2prototype.tests.pdb
