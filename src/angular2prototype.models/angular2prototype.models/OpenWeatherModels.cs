@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Net;
 
-namespace angular2prototype.web.Models
+namespace angular2prototype.models
 {
 	public class OpenWeatherResponse
 	{
@@ -23,5 +22,18 @@ namespace angular2prototype.web.Models
 	public class Main
 	{
 		public string Temp { get; set; }
+	}
+
+	public class WeatherResponse : ServiceResponse
+	{		
+		public string Temp { get; set; }
+		public string Summary { get; set; }
+		public string City { get; set; }
+	}
+
+	public class ServiceResponse
+	{
+		public HttpStatusCode Status { get; set; }
+		public string Message { get; set; }
 	}
 }

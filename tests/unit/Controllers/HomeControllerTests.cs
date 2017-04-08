@@ -15,7 +15,7 @@ namespace angular2prototype.tests.Controllers
 
 			ViewResult result = controller.Index() as ViewResult;
 
-			Assert.AreEqual("Index", result.ViewName);
+			Assert.IsNull(result.ViewName);
         }
     }
 }

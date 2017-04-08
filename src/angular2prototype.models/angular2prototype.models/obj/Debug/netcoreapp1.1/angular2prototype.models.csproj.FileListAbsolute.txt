@@ -1,0 +1,6 @@
+D:\Projects\angular2prototype\src\angular2prototype.models\angular2prototype.models\bin\Debug\netcoreapp1.1\angular2prototype.models.deps.json
+D:\Projects\angular2prototype\src\angular2prototype.models\angular2prototype.models\bin\Debug\netcoreapp1.1\angular2prototype.models.dll
+D:\Projects\angular2prototype\src\angular2prototype.models\angular2prototype.models\bin\Debug\netcoreapp1.1\angular2prototype.models.pdb
+D:\Projects\angular2prototype\src\angular2prototype.models\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.AssemblyInfo.cs
+D:\Projects\angular2prototype\src\angular2prototype.models\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.dll
+D:\Projects\angular2prototype\src\angular2prototype.models\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.pdb

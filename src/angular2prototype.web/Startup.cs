@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using angular2prototype.services;
 
 namespace angular2prototype
 {
@@ -30,6 +31,8 @@ namespace angular2prototype
         {
             // Add framework services.
             services.AddMvc();
+
+			services.AddScoped<IWeatherService, WeatherService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
