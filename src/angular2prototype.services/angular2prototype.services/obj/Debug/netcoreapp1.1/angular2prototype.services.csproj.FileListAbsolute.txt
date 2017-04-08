@@ -1,9 +1,0 @@
-D:\Projects\angular2prototype\src\angular2prototype.services\angular2prototype.services\bin\Debug\netcoreapp1.1\angular2prototype.services.deps.json
-D:\Projects\angular2prototype\src\angular2prototype.services\angular2prototype.services\bin\Debug\netcoreapp1.1\angular2prototype.services.dll
-D:\Projects\angular2prototype\src\angular2prototype.services\angular2prototype.services\bin\Debug\netcoreapp1.1\angular2prototype.services.pdb
-D:\Projects\angular2prototype\src\angular2prototype.services\angular2prototype.services\bin\Debug\netcoreapp1.1\angular2prototype.models.dll
-D:\Projects\angular2prototype\src\angular2prototype.services\angular2prototype.services\bin\Debug\netcoreapp1.1\angular2prototype.models.pdb
-D:\Projects\angular2prototype\src\angular2prototype.services\angular2prototype.services\obj\Debug\netcoreapp1.1\angular2prototype.services.csprojResolveAssemblyReference.cache
-D:\Projects\angular2prototype\src\angular2prototype.services\angular2prototype.services\obj\Debug\netcoreapp1.1\angular2prototype.services.AssemblyInfo.cs
-D:\Projects\angular2prototype\src\angular2prototype.services\angular2prototype.services\obj\Debug\netcoreapp1.1\angular2prototype.services.dll
-D:\Projects\angular2prototype\src\angular2prototype.services\angular2prototype.services\obj\Debug\netcoreapp1.1\angular2prototype.services.pdb
