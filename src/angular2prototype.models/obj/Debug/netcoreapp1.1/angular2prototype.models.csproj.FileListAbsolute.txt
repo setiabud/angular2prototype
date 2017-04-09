@@ -10,3 +10,4 @@ D:\Projects\angular2prototype\src\angular2prototype.models\bin\Debug\netcoreapp1
 D:\Projects\angular2prototype\src\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.AssemblyInfo.cs
 D:\Projects\angular2prototype\src\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.dll
 D:\Projects\angular2prototype\src\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.pdb
+D:\Projects\angular2prototype\src\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.csprojResolveAssemblyReference.cache

@@ -4470,6 +4470,22 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "angular2prototype.models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.1.1"
+        }
+      },
+      "angular2prototype.services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.1.1",
+          "Newtonsoft.Json": "9.0.1",
+          "angular2prototype.models": "1.0.0"
+        }
+      },
       "angular2prototype.web/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.1",
@@ -4484,7 +4500,9 @@
           "Microsoft.Extensions.Logging.Debug": "1.1.1",
           "Microsoft.NETCore.App": "1.1.1",
           "Microsoft.VisualStudio.Web.BrowserLink": "1.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "1.1.0"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "1.1.0",
+          "angular2prototype.models": "1.0.0",
+          "angular2prototype.services": "1.0.0"
         }
       }
     }
@@ -11713,6 +11731,16 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "angular2prototype.models/1.0.0": {
+      "type": "project",
+      "path": "../../src/angular2prototype.models/angular2prototype.models.csproj",
+      "msbuildProject": "../../src/angular2prototype.models/angular2prototype.models.csproj"
+    },
+    "angular2prototype.services/1.0.0": {
+      "type": "project",
+      "path": "../../src/angular2prototype.services/angular2prototype.services.csproj",
+      "msbuildProject": "../../src/angular2prototype.services/angular2prototype.services.csproj"
+    },
     "angular2prototype.web/1.0.0": {
       "type": "project",
       "path": "../../src/angular2prototype.web/angular2prototype.web.csproj",
@@ -11734,9 +11762,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\angular2prototype\\tests\\unit\\angular2prototype.tests.csproj",
-      "projectName": "angular2prototype.tests",
-      "projectPath": "D:\\Projects\\angular2prototype\\tests\\unit\\angular2prototype.tests.csproj",
+      "projectUniqueName": "D:\\Projects\\angular2prototype\\tests\\unit\\angular2prototype.web.tests.csproj",
+      "projectName": "angular2prototype.web.tests",
+      "projectPath": "D:\\Projects\\angular2prototype\\tests\\unit\\angular2prototype.web.tests.csproj",
       "outputPath": "D:\\Projects\\angular2prototype\\tests\\unit\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
