@@ -1,0 +1,24 @@
+﻿<h1>Values List/Search</h1>
+
+<label for="city">Name</label>
+<input type="text" id="name" [(ngModel)]="queryName" />
+<input type="button" value="Search" (click)="searchValues(queryName)" />
+
+<div *ngIf="values">
+	<h3>Search Result</h3>
+
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let value of values">
+				<td>{{value.id}}</td>
+				<td>{{value.Name}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
