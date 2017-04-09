@@ -1,0 +1,9 @@
+C:\Projects\Centric\angular2test\bin\Debug\netcoreapp1.1\angular2test.deps.json
+C:\Projects\Centric\angular2test\bin\Debug\netcoreapp1.1\angular2test.runtimeconfig.json
+C:\Projects\Centric\angular2test\bin\Debug\netcoreapp1.1\angular2test.runtimeconfig.dev.json
+C:\Projects\Centric\angular2test\bin\Debug\netcoreapp1.1\angular2test.dll
+C:\Projects\Centric\angular2test\bin\Debug\netcoreapp1.1\angular2test.pdb
+C:\Projects\Centric\angular2test\obj\Debug\netcoreapp1.1\angular2test.csprojResolveAssemblyReference.cache
+C:\Projects\Centric\angular2test\obj\Debug\netcoreapp1.1\angular2test.AssemblyInfo.cs
+C:\Projects\Centric\angular2test\obj\Debug\netcoreapp1.1\angular2test.dll
+C:\Projects\Centric\angular2test\obj\Debug\netcoreapp1.1\angular2test.pdb

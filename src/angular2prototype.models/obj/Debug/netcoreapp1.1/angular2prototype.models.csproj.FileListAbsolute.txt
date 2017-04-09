@@ -11,3 +11,9 @@ D:\Projects\angular2prototype\src\angular2prototype.models\obj\Debug\netcoreapp1
 D:\Projects\angular2prototype\src\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.dll
 D:\Projects\angular2prototype\src\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.pdb
 D:\Projects\angular2prototype\src\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.csprojResolveAssemblyReference.cache
+C:\Projects\Centric\angular2prototype\src\angular2prototype.models\bin\Debug\netcoreapp1.1\angular2prototype.models.deps.json
+C:\Projects\Centric\angular2prototype\src\angular2prototype.models\bin\Debug\netcoreapp1.1\angular2prototype.models.dll
+C:\Projects\Centric\angular2prototype\src\angular2prototype.models\bin\Debug\netcoreapp1.1\angular2prototype.models.pdb
+C:\Projects\Centric\angular2prototype\src\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.AssemblyInfo.cs
+C:\Projects\Centric\angular2prototype\src\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.dll
+C:\Projects\Centric\angular2prototype\src\angular2prototype.models\obj\Debug\netcoreapp1.1\angular2prototype.models.pdb

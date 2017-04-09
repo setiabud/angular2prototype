@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "angular2prototype.services"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4A6E50FD-64C1-4D56-AC4D-0444C8BA4A15}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "angular2prototype.web.tests", "tests\unit\angular2prototype.web.tests.csproj", "{ED8B24A0-A5E6-48D6-960C-6EECEBAAF848}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "angular2prototype.web.tests", "tests\unit\angular2prototype.web.tests.csproj", "{B838D312-6C08-4484-A761-B96EA6ED835A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,15 +31,15 @@ Global
 		{30E46AC4-32AB-4EDC-97DE-86C25A86C531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30E46AC4-32AB-4EDC-97DE-86C25A86C531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30E46AC4-32AB-4EDC-97DE-86C25A86C531}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ED8B24A0-A5E6-48D6-960C-6EECEBAAF848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED8B24A0-A5E6-48D6-960C-6EECEBAAF848}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED8B24A0-A5E6-48D6-960C-6EECEBAAF848}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED8B24A0-A5E6-48D6-960C-6EECEBAAF848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B838D312-6C08-4484-A761-B96EA6ED835A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B838D312-6C08-4484-A761-B96EA6ED835A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B838D312-6C08-4484-A761-B96EA6ED835A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B838D312-6C08-4484-A761-B96EA6ED835A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{ED8B24A0-A5E6-48D6-960C-6EECEBAAF848} = {4A6E50FD-64C1-4D56-AC4D-0444C8BA4A15}
+		{B838D312-6C08-4484-A761-B96EA6ED835A} = {4A6E50FD-64C1-4D56-AC4D-0444C8BA4A15}
 	EndGlobalSection
 EndGlobal

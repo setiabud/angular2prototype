@@ -1,0 +1,9 @@
+C:\Projects\Centric\angular2prototype\src\bin\Debug\netcoreapp1.1\angular2prototype.deps.json
+C:\Projects\Centric\angular2prototype\src\bin\Debug\netcoreapp1.1\angular2prototype.runtimeconfig.json
+C:\Projects\Centric\angular2prototype\src\bin\Debug\netcoreapp1.1\angular2prototype.runtimeconfig.dev.json
+C:\Projects\Centric\angular2prototype\src\bin\Debug\netcoreapp1.1\angular2prototype.dll
+C:\Projects\Centric\angular2prototype\src\bin\Debug\netcoreapp1.1\angular2prototype.pdb
+C:\Projects\Centric\angular2prototype\src\obj\Debug\netcoreapp1.1\angular2prototype.csprojResolveAssemblyReference.cache
+C:\Projects\Centric\angular2prototype\src\obj\Debug\netcoreapp1.1\angular2prototype.AssemblyInfo.cs
+C:\Projects\Centric\angular2prototype\src\obj\Debug\netcoreapp1.1\angular2prototype.dll
+C:\Projects\Centric\angular2prototype\src\obj\Debug\netcoreapp1.1\angular2prototype.pdb
