@@ -36,9 +36,6 @@
     <Content Include="wwwroot\dist\vendor.js" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\angular2prototype.models\angular2prototype.models.csproj" />
     <ProjectReference Include="..\angular2prototype.services\angular2prototype.services.csproj" />
   </ItemGroup>

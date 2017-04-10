@@ -1,43 +1,52 @@
 ﻿using angular2prototype.models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace angular2prototype.services
 {
-    public class ValueService : IValueService
+	public class ValueService : IValueService
 	{
-		public async Task<List<ValueModel>> Search(string name)
+		private List<ValueModel> _values;
+		public ValueService()
 		{
-			// Dummy search results - this would normally be replaced by another service call, perhaps to a database
-			var searchResults = new List<ValueModel> () { 
+			_values = new List<ValueModel>() {
 										new ValueModel { Id = 1, Name = "value 1" },
 										new ValueModel { Id = 2, Name = "value 2" }
 									 };
-			return await Task.Run(() => searchResults);
+		}
+
+		public async Task<List<ValueModel>> Search(string name)
+		{
+			return await Task.Run(() => _values.Where(v => v.Name.Contains(name)).ToList());
 		}
 
 		public async Task<ValueModel> Get(int id)
 		{
-			// Dummy search result - this would normally be replaced by another service call, perhaps to a database
-			var customObject = new ValueModel { Id = id, Name = "name" };
-			return await Task.Run(() => customObject);
+			return await Task.Run(() => _values.Find(v => v.Id == id));
 		}
 
 		public async Task Update(ValueModel value)
 		{
-			await Task.Run(() => value);
+			await Task.Run(() => { _values.Find(v => v.Id == value.Id).Name = value.Name; });
 		}
 
 		public async Task Delete(int id)
 		{
-			await Task.Run(() => id);
+			await Task.Run(() => { _values.RemoveAll(v => v.Id == id); });
 		}
 
 		public async Task<ValueModel> Add(ValueModel value)
 		{
-			return await Task.Run(() => value);
+			return await Task.Run(() =>
+			{
+				var maxId = _values.Max(v => v.Id);
+				var newItem = new ValueModel { Id = maxId + 1, Name = value.Name };
+				_values.Add(newItem);
+				return newItem;
+			});
 		}
 	}
 }

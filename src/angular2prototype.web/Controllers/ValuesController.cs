@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 using angular2prototype.services;
 using System.Threading.Tasks;
+using angular2prototype.web.Models;
 
 namespace angular2prototype.web.Controllers
 {
@@ -60,22 +61,37 @@ namespace angular2prototype.web.Controllers
 
 		// POST api/values
 		[HttpPost]
-		public IActionResult Post([FromBody]string value)
+		public async Task<IActionResult> Post([FromBody]NewValuesViewModel value)
 		{
-			return Created($"api/Values/{value}", value);
+			if (!ModelState.IsValid) { return BadRequest(ModelState); }
+			var createdObject = await _valueService.Add(new models.ValueModel { Name = value.Name });
+			return Created($"api/Values/", value.Name);
 		}
 
 		// PUT api/values/5
 		[HttpPut("{id}")]
-		public IActionResult Put(int id, [FromBody]string value)
+		public async Task<IActionResult> Put([FromBody]ValuesViewModel value)
 		{
+			if (!ModelState.IsValid) { return BadRequest(ModelState); }
+
+			var customObject = await _valueService.Get(value.Id);
+			if (customObject == null) { return NotFound(value.Id); }
+
+			customObject.Id = value.Id;
+			customObject.Name = value.Name;
+			await _valueService.Update(customObject);
+
 			return Accepted(value);
 		}
 
 		// DELETE api/values/5
 		[HttpDelete("{id}")]
-		public IActionResult Delete(int id)
+		public async Task<IActionResult> Delete(int id)
 		{
+			var customObject = await _valueService.Get(id);
+			if (customObject == null) { return NotFound(id); }
+
+			await _valueService.Delete(id);
 			return NoContent();
 		}
 	}
