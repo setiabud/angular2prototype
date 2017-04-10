@@ -2819,6 +2819,22 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "angular2prototype.models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.1.1"
+        }
+      },
+      "angular2prototype.services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.1.1",
+          "Newtonsoft.Json": "9.0.1",
+          "angular2prototype.models": "1.0.0"
+        }
       }
     }
   },
@@ -8519,6 +8535,16 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "angular2prototype.models/1.0.0": {
+      "type": "project",
+      "path": "../../../src/angular2prototype.models/angular2prototype.models.csproj",
+      "msbuildProject": "../../../src/angular2prototype.models/angular2prototype.models.csproj"
+    },
+    "angular2prototype.services/1.0.0": {
+      "type": "project",
+      "path": "../../../src/angular2prototype.services/angular2prototype.services.csproj",
+      "msbuildProject": "../../../src/angular2prototype.services/angular2prototype.services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8526,7 +8552,8 @@
       "MSTest.TestAdapter >= 1.1.11",
       "MSTest.TestFramework >= 1.1.11",
       "Microsoft.NET.Test.Sdk >= 15.0.0",
-      "Microsoft.NETCore.App >= 1.1.1"
+      "Microsoft.NETCore.App >= 1.1.1",
+      "angular2prototype.services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8545,7 +8572,11 @@
       ],
       "frameworks": {
         "netcoreapp1.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projects\\Centric\\angular2prototype\\src\\angular2prototype.services\\angular2prototype.services.csproj": {
+              "projectPath": "C:\\Projects\\Centric\\angular2prototype\\src\\angular2prototype.services\\angular2prototype.services.csproj"
+            }
+          }
         }
       }
     },

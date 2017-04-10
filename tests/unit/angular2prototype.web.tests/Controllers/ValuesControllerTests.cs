@@ -20,7 +20,7 @@ namespace angular2prototype.web.tests.Controllers
 		private Mock<HttpContext> _contextMock;
 
 		[TestInitialize]
-		public void InitializeForTests()
+		public void Setup()
 		{
 			var list = new List<ValueModel>() { new ValueModel { Id = 1, Name = "value 1" }, new ValueModel { Id = 2, Name = "value 2" } };
 			_serviceMock = new Mock<IValueService>();
