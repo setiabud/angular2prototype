@@ -3,22 +3,27 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
+using angular2prototype.services;
+using System.Threading.Tasks;
 
 namespace angular2prototype.web.Controllers
 {
 	[Route("api/[controller]")]
 	public class ValuesController : Controller
 	{
+		private readonly IValueService _valueService;
+
+		public ValuesController(IValueService valueService)
+		{
+			_valueService = valueService;
+		}
+
 		// GET api/values
 		[HttpGet]
-		public IActionResult Get([FromQuery, Required]SearchOptions searchOptions)
+		public async Task<IActionResult> Get([FromQuery, Required]SearchOptions searchOptions)
 		{
 			// Dummy search results - this would normally be replaced by another service call, perhaps to a database
-			var searchResults = new[]{
-										new{ id=1, Name="value 1" },
-										new{ id=2, Name="value 2"}
-									 }.ToList();
-
+			var searchResults = await _valueService.Search(searchOptions.Name);
 			var formattedResult = JsonConvert.SerializeObject(searchResults, Formatting.Indented);
 
 			Response.Headers.Add("x-total-count", searchResults.Count.ToString());
@@ -28,12 +33,12 @@ namespace angular2prototype.web.Controllers
 
 		// GET api/values/5
 		[HttpGet("{id:int:min(1)}", Name = "GetById")]
-		public IActionResult GetById([Required]int id)
+		public async Task<IActionResult> GetById([Required]int id)
 		{
 			try
 			{
 				// Dummy search result - this would normally be replaced by another service call, perhaps to a database
-				var customObject = new { id = id, name = "name" };
+				var customObject = await _valueService.Get(id);
 
 				var formattedCustomObject = JsonConvert.SerializeObject(customObject, Formatting.Indented);
 

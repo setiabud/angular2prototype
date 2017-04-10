@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "13c0700047b59f0d87a6"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "247bbf337513cd7489ac"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9809,7 +9809,7 @@ module.exports = "<div class='main-nav'>\r\n    <div class='navbar navbar-invers
 /* 68 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Values List/Search</h1>\r\n\r\n<label for=\"city\">Name</label>\r\n<input type=\"text\" id=\"name\" [(ngModel)]=\"queryName\" />\r\n<input type=\"button\" value=\"Search\" (click)=\"searchValues(queryName)\" />\r\n\r\n<div *ngIf=\"values\">\r\n\t<h3>Search Result</h3>\r\n\r\n\t<table class=\"table table-bordered table-striped\">\r\n\t\t<thead>\r\n\t\t\t<tr>\r\n\t\t\t\t<th>Id</th>\r\n\t\t\t\t<th>Name</th>\r\n\t\t\t</tr>\r\n\t\t</thead>\r\n\t\t<tbody>\r\n\t\t\t<tr *ngFor=\"let value of values\">\r\n\t\t\t\t<td>{{value.id}}</td>\r\n\t\t\t\t<td>{{value.Name}}</td>\r\n\t\t\t</tr>\r\n\t\t</tbody>\r\n\t</table>\r\n</div>\r\n";
+module.exports = "<h1>Values List/Search</h1>\r\n\r\n<label for=\"city\">Name</label>\r\n<input type=\"text\" id=\"name\" [(ngModel)]=\"queryName\" />\r\n<input type=\"button\" value=\"Search\" (click)=\"searchValues(queryName)\" />\r\n\r\n<div *ngIf=\"values\">\r\n\t<h3>Search Result</h3>\r\n\r\n\t<table class=\"table table-bordered table-striped\">\r\n\t\t<thead>\r\n\t\t\t<tr>\r\n\t\t\t\t<th>Id</th>\r\n\t\t\t\t<th>Name</th>\r\n\t\t\t</tr>\r\n\t\t</thead>\r\n\t\t<tbody>\r\n\t\t\t<tr *ngFor=\"let value of values\">\r\n\t\t\t\t<td>{{value.Id}}</td>\r\n\t\t\t\t<td>{{value.Name}}</td>\r\n\t\t\t</tr>\r\n\t\t</tbody>\r\n\t</table>\r\n</div>\r\n";
 
 /***/ }),
 /* 69 */
