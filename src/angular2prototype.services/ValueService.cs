@@ -30,12 +30,20 @@ namespace angular2prototype.services
 
 		public async Task Update(ValueModel value)
 		{
-			await Task.Run(() => { _values.Find(v => v.Id == value.Id).Name = value.Name; });
+			if (await IdExist(value.Id))
+			{
+				await Task.Run(() => { _values.Find(v => v.Id == value.Id).Name = value.Name; }); return;
+			}
+			throw new KeyNotFoundException($"Id '{value.Id}' is not found.");
 		}
 
 		public async Task Delete(int id)
 		{
-			await Task.Run(() => { _values.RemoveAll(v => v.Id == id); });
+			if (await IdExist(id))
+			{
+				await Task.Run(() => { _values.RemoveAll(v => v.Id == id); }); return;
+			}
+			throw new KeyNotFoundException($"Id '{id}' is not found.");
 		}
 
 		public async Task<ValueModel> Add(ValueModel value)
@@ -47,6 +55,12 @@ namespace angular2prototype.services
 				_values.Add(newItem);
 				return newItem;
 			});
+		}
+
+		private async Task<bool> IdExist(int id)
+		{
+			var item = await Get(id);
+			return item != null;
 		}
 	}
 }
