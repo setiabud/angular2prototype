@@ -1,4 +1,4 @@
-﻿import { Component } from '@angular/core';
+﻿import { Injectable, Inject, Component } from '@angular/core';
 
 // import http for ajax calls
 import { Http } from '@angular/http'; 
@@ -7,18 +7,21 @@ import { Http } from '@angular/http';
 	selector: 'weather',
 	template: require('./weather.component.html')
 })
+
+@Injectable()
 export class WeatherComponent {
 	public weather: Weather;
+	private apiUrl;
 
 	constructor(private http: Http) {
+		this.apiUrl = "/api/weather/";
 	}
 
 	public getWeather(chosenCity: string) {
-		// url to the api address
-		var url = '/api/weather/city/';
+		var action = 'city/';
 
 		// ajax get and bind result to weather class
-		this.http.get(url + chosenCity).subscribe(result => {
+		this.http.get(this.apiUrl + action + chosenCity).subscribe(result => {
 			this.weather = result.json();
 		});
 	}

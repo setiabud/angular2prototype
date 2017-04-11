@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "247bbf337513cd7489ac"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ce77c7bb6a732a0e8d06"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9399,14 +9399,16 @@ var http_1 = __webpack_require__(28);
 var WeatherComponent = (function () {
     function WeatherComponent(http) {
         this.http = http;
+        this.apiUrl = "/api/weather/";
     }
     WeatherComponent.prototype.getWeather = function (chosenCity) {
         var _this = this;
-        // url to the api address
-        var url = '/api/weather/city/';
+        var action = 'city/';
         // ajax get and bind result to weather class
-        this.http.get(url + chosenCity).subscribe(function (result) {
+        this.http.get(this.apiUrl + action + chosenCity).subscribe(function (result) {
+            alert(JSON.stringify(result));
             _this.weather = result.json();
+            alert(_this.weather.city);
         });
     };
     return WeatherComponent;
@@ -9416,6 +9418,7 @@ WeatherComponent = __decorate([
         selector: 'weather',
         template: __webpack_require__(69)
     }),
+    core_1.Injectable(),
     __metadata("design:paramtypes", [http_1.Http])
 ], WeatherComponent);
 exports.WeatherComponent = WeatherComponent;

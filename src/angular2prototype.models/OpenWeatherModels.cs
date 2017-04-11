@@ -1,4 +1,6 @@
-﻿using angular2prototype.core.models;
+﻿using angular2prototype.core.helpers;
+using angular2prototype.core.models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -9,8 +11,10 @@ namespace angular2prototype.models
 	{
 		public string Name { get; set; }
 
+		[JsonConverter(typeof(ConcreteJsonConverter<IEnumerable<WeatherDescription>>))]
 		public IEnumerable<IWeatherDescription> Weather { get; set; }
 
+		[JsonConverter(typeof(ConcreteJsonConverter<Main>))]
 		public IMain Main { get; set; }
 	}
 

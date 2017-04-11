@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using angular2prototype.services;
 using angular2prototype.core.services;
+using angular2prototype.core.models;
+using angular2prototype.models;
 
 namespace angular2prototype
 {
@@ -35,6 +37,9 @@ namespace angular2prototype
 
 			services.AddScoped<IWeatherService, WeatherService>();
 			services.AddScoped<IValueService, ValueService>();
+			services.AddScoped<IOpenWeatherResponse, OpenWeatherResponse>();
+			services.AddScoped<IWeatherDescription, WeatherDescription>();
+			services.AddScoped<IMain, Main>();
 		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
