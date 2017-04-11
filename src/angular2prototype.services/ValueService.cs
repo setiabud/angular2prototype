@@ -25,7 +25,9 @@ namespace angular2prototype.services
 
 		public async Task<ValueModel> Get(int id)
 		{
-			return await Task.Run(() => _values.Find(v => v.Id == id));
+			var result = await Task.Run(() => _values.Find(v => v.Id == id));
+			if (result == null) throw new KeyNotFoundException($"Id '{id}' is not found.");
+			return result;
 		}
 
 		public async Task Update(ValueModel value)

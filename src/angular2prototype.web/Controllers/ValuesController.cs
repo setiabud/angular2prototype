@@ -72,27 +72,39 @@ namespace angular2prototype.web.Controllers
 		[HttpPut("{id}")]
 		public async Task<IActionResult> Put([FromBody]ValuesViewModel value)
 		{
-			if (!ModelState.IsValid) { return BadRequest(ModelState); }
+			try
+			{
+				if (!ModelState.IsValid) { return BadRequest(ModelState); }
 
-			var customObject = await _valueService.Get(value.Id);
-			if (customObject == null) { return NotFound(value.Id); }
+				var customObject = await _valueService.Get(value.Id);
+				customObject.Id = value.Id;
+				customObject.Name = value.Name;
+				await _valueService.Update(customObject);
 
-			customObject.Id = value.Id;
-			customObject.Name = value.Name;
-			await _valueService.Update(customObject);
-
-			return Accepted(value);
+				return Accepted();
+			}
+			catch (KeyNotFoundException)
+			{
+				Response.Headers.Add("x-status-reason", $"No resource was found with the unique identifier '{value.Id}'.");
+				return NotFound();
+			}
 		}
 
 		// DELETE api/values/5
 		[HttpDelete("{id}")]
 		public async Task<IActionResult> Delete(int id)
 		{
-			var customObject = await _valueService.Get(id);
-			if (customObject == null) { return NotFound(id); }
-
-			await _valueService.Delete(id);
-			return NoContent();
+			try
+			{
+				var customObject = await _valueService.Get(id);
+				await _valueService.Delete(id);
+				return NoContent();
+			}
+			catch (KeyNotFoundException)
+			{
+				Response.Headers.Add("x-status-reason", $"No resource was found with the unique identifier '{id}'.");
+				return NotFound();
+			}
 		}
 	}
 

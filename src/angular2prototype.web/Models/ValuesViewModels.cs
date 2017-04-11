@@ -12,9 +12,12 @@ namespace angular2prototype.web.Models
 		public string Name { get; set; }
 	}
 
-	public class ValuesViewModel : NewValuesViewModel
+	public class ValuesViewModel 
 	{
 		[Required]
 		public int Id { get; set; }
+
+		[Required]
+		public string Name { get; set; }
 	}
 }

@@ -25,11 +25,10 @@ namespace angular2prototype.services.tests
 		}
 
 		[TestMethod]
-		public async Task GetById_InvalidId_ReturnsNull()
+		[ExpectedException(typeof(KeyNotFoundException))]
+		public async Task GetById_InvalidId_GetsException()
 		{
 			var result = await _valueService.Get(5);
-
-			Assert.IsNull(result);
 		}
 
 		[TestMethod]
@@ -82,9 +81,9 @@ namespace angular2prototype.services.tests
 		public async Task Delete_ValidId_RemovesItem()
 		{
 			await _valueService.Delete(1);
-			var result = await _valueService.Get(1);
+			var result = await _valueService.Search("value 1");
 
-			Assert.IsNull(result);
+			Assert.IsTrue(!result.Any());
 		}
 
 		[TestMethod]
