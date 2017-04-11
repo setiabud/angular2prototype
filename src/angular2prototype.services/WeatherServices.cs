@@ -5,6 +5,8 @@ using Newtonsoft.Json;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
+using angular2prototype.core.services;
+using angular2prototype.core.models;
 
 namespace angular2prototype.services
 {
@@ -12,7 +14,7 @@ namespace angular2prototype.services
 	{
 		private string appKey = "6ad99325205ce8235270213f3511c82c";
 
-		public async Task<WeatherResponse> GetWeatherByCity(string city)
+		public async Task<IWeatherResponse> GetWeatherByCity(string city)
 		{
 			using (var client = new HttpClient())
 			{

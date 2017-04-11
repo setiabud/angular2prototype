@@ -4,6 +4,8 @@ using angular2prototype.models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using angular2prototype.core.services;
+using angular2prototype.core.models;
 
 namespace angular2prototype.services.tests
 {
@@ -37,8 +39,8 @@ namespace angular2prototype.services.tests
 			var result = await _valueService.Get(1);
 
 			Assert.IsNotNull(result);
-			Assert.IsTrue((result as ValueModel).Id == 1);
-			Assert.IsTrue((result as ValueModel).Name == "value 1");
+			Assert.IsTrue((result as IValueModel).Id == 1);
+			Assert.IsTrue((result as IValueModel).Name == "value 1");
 		}
 
 		[TestMethod]
@@ -47,7 +49,7 @@ namespace angular2prototype.services.tests
 			var results = await _valueService.Search("NOT EXIST");
 
 			Assert.IsNotNull(results);
-			Assert.IsTrue((results as List<ValueModel>).Count == 0);
+			Assert.IsTrue((results as List<IValueModel>).Count == 0);
 		}
 
 		[TestMethod]
@@ -56,8 +58,8 @@ namespace angular2prototype.services.tests
 			var results = await _valueService.Search("value");
 
 			Assert.IsNotNull(results);
-			Assert.IsTrue((results as List<ValueModel>).Count > 0);
-			Assert.IsTrue((results as List<ValueModel>).All(i => i.Name.Contains("value")));
+			Assert.IsTrue((results as List<IValueModel>).Count > 0);
+			Assert.IsTrue((results as List<IValueModel>).All(i => i.Name.Contains("value")));
 		}
 
 		[TestMethod]
@@ -66,8 +68,8 @@ namespace angular2prototype.services.tests
 			var newItem = await _valueService.Add(new ValueModel { Name = "new value" });
 
 			Assert.IsNotNull(newItem);
-			Assert.IsTrue((newItem as ValueModel).Name == "new value");
-			Assert.IsTrue((newItem as ValueModel).Id > 2);
+			Assert.IsTrue((newItem as IValueModel).Name == "new value");
+			Assert.IsTrue((newItem as IValueModel).Id > 2);
 		}
 
 		[TestMethod]

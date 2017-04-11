@@ -1,4 +1,6 @@
-﻿using angular2prototype.models;
+﻿using angular2prototype.core.models;
+using angular2prototype.core.services;
+using angular2prototype.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,28 +11,28 @@ namespace angular2prototype.services
 {
 	public class ValueService : IValueService
 	{
-		private List<ValueModel> _values;
+		private List<IValueModel> _values;
 		public ValueService()
 		{
 			_values = new List<ValueModel>() {
 										new ValueModel { Id = 1, Name = "value 1" },
 										new ValueModel { Id = 2, Name = "value 2" }
-									 };
+									 }.Cast<IValueModel>().ToList();
 		}
 
-		public async Task<List<ValueModel>> Search(string name)
+		public async Task<List<IValueModel>> Search(string name)
 		{
-			return await Task.Run(() => _values.Where(v => v.Name.Contains(name)).ToList());
+			return await Task.Run(() => _values.Cast<IValueModel>().Where(v => v.Name.Contains(name)).ToList());
 		}
 
-		public async Task<ValueModel> Get(int id)
+		public async Task<IValueModel> Get(int id)
 		{
 			var result = await Task.Run(() => _values.Find(v => v.Id == id));
 			if (result == null) throw new KeyNotFoundException($"Id '{id}' is not found.");
 			return result;
 		}
 
-		public async Task Update(ValueModel value)
+		public async Task Update(IValueModel value)
 		{
 			if (await IdExist(value.Id))
 			{
@@ -48,7 +50,7 @@ namespace angular2prototype.services
 			throw new KeyNotFoundException($"Id '{id}' is not found.");
 		}
 
-		public async Task<ValueModel> Add(ValueModel value)
+		public async Task<IValueModel> Add(IValueModel value)
 		{
 			return await Task.Run(() =>
 			{

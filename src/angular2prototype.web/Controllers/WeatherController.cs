@@ -1,4 +1,5 @@
-﻿using angular2prototype.services;
+﻿using angular2prototype.core.services;
+using angular2prototype.services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 

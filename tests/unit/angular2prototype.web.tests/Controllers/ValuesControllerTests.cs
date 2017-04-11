@@ -9,6 +9,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using angular2prototype.core.services;
+using System.Linq;
+using angular2prototype.core.models;
 
 namespace angular2prototype.web.tests.Controllers
 {
@@ -23,7 +26,7 @@ namespace angular2prototype.web.tests.Controllers
 		[TestInitialize]
 		public void Setup()
 		{
-			var list = new List<ValueModel>() { new ValueModel { Id = 1, Name = "value 1" }, new ValueModel { Id = 2, Name = "value 2" } };
+			var list = new List<ValueModel>() { new ValueModel { Id = 1, Name = "value 1" }, new ValueModel { Id = 2, Name = "value 2" } }.Cast<IValueModel>().ToList();
 			_serviceMock = new Mock<IValueService>();
 			_serviceMock.Setup(r => r.Search(It.IsAny<string>())).Returns(Task.FromResult(list));
 			_serviceMock.Setup(r => r.Get(5)).Throws(new KeyNotFoundException());

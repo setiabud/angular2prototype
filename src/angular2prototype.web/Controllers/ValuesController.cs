@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using angular2prototype.services;
 using System.Threading.Tasks;
 using angular2prototype.web.Models;
+using angular2prototype.core.services;
 
 namespace angular2prototype.web.Controllers
 {
