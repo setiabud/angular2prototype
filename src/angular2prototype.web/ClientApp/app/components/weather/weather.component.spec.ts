@@ -27,24 +27,23 @@ describe('Weather Component', () => {
 		expect(titleText).toEqual('Weather Check');
 	}));
 
-	describe('getWeather()', () => {
-		it('should set weather correctly',
-			async(inject([WeatherComponent, XHRBackend], (weatherComponent: WeatherComponent, mockBackend) => {
+	it('should set weather correctly',
+		async(inject([WeatherComponent, XHRBackend], (weatherComponent: WeatherComponent, mockBackend) => {
 
-				const mockResponse = {
-					temp: 72, summary: 'Cloudy', city: 'Columbus'
-				};
+			const mockResponse = {
+				temp: '72', summary: 'Cloudy', city: 'Columbus'
+			};
 
-				mockBackend.connections.subscribe((connection: MockConnection) => {
-					connection.mockRespond(new Response(new ResponseOptions({
-						body: JSON.stringify(mockResponse)
-					})));
-				});
+			mockBackend.connections.subscribe((connection: MockConnection) => {
+				connection.mockRespond(new Response(new ResponseOptions({
+					body: JSON.stringify(mockResponse)
+				})));
+			});
 
-				weatherComponent.getWeather('Columbus');
-				//expect(weatherComponent.weather.temp).toEqual('72');
-				expect(weatherComponent.weather.summary).toEqual('Cloudy');
-				expect(weatherComponent.weather.city).toEqual('Columbus');
-			})));
-	});
+			weatherComponent.getWeather('Columbus');
+			expect(weatherComponent.weather.temp).toEqual('72');
+			expect(weatherComponent.weather.summary).toEqual('Cloudy');
+			expect(weatherComponent.weather.city).toEqual('Columbus');
+		}))
+	);
 });
