@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\angular2prototype.services\angular2prototype.services.csproj" />
+    <ProjectReference Include="..\..\src\angular2prototype.core\angular2prototype.core.csproj" />
+    <ProjectReference Include="..\..\src\angular2prototype.models\angular2prototype.models.csproj" />
+    <ProjectReference Include="..\..\src\angular2prototype.services\angular2prototype.services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

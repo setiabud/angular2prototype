@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using angular2prototype.core.services;
 using angular2prototype.core.models;
 
-namespace angular2prototype.services.tests
+namespace angular2prototype.services.tests.unit
 {
 	[TestClass]
 	public class ValueServiceTests

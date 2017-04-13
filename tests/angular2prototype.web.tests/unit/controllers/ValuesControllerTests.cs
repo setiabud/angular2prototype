@@ -13,7 +13,7 @@ using angular2prototype.core.services;
 using System.Linq;
 using angular2prototype.core.models;
 
-namespace angular2prototype.web.tests.Controllers
+namespace angular2prototype.web.tests.unit.controllers
 {
 	[TestClass]
 	public class ValuesControllerTests

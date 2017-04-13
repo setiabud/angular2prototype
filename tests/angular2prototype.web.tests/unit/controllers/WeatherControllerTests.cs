@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using angular2prototype.web.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
-namespace angular2prototype.web.tests.Controllers
+namespace angular2prototype.web.tests.unit.controllers
 {
 	[TestClass]
 	public class WeatherControllerTests

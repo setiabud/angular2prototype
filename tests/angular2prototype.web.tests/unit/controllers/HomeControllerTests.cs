@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using angular2prototype.web.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
-namespace angular2prototype.web.tests.Controllers
+namespace angular2prototype.web.tests.unit.controllers
 {
     [TestClass]
     public class HomeControllerTests
@@ -11,11 +11,11 @@ namespace angular2prototype.web.tests.Controllers
         [TestMethod]
         public void Index_Should_Return_Correct_View()
         {
-			HomeController controller = new HomeController();
+            HomeController controller = new HomeController();
 
-			ViewResult result = controller.Index() as ViewResult;
+            ViewResult result = controller.Index() as ViewResult;
 
-			Assert.IsNull(result.ViewName);
+            Assert.IsNull(result.ViewName);
         }
     }
 }
