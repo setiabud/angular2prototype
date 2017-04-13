@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="1.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="extensions\" />
+    <ProjectReference Include="..\src\angular2prototype.web\angular2prototype.web.csproj" />
   </ItemGroup>
 
 </Project>

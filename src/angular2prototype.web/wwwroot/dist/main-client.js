@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ce77c7bb6a732a0e8d06"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b38a3490fc7653db41c0"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9406,9 +9406,7 @@ var WeatherComponent = (function () {
         var action = 'city/';
         // ajax get and bind result to weather class
         this.http.get(this.apiUrl + action + chosenCity).subscribe(function (result) {
-            alert(JSON.stringify(result));
             _this.weather = result.json();
-            alert(_this.weather.city);
         });
     };
     return WeatherComponent;

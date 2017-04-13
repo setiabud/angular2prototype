@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace angular2prototype.web.tests.unit.controllers
 {
-    [TestClass]
+    [TestCategory("controller"), TestCategory("unit"), TestClass]
     public class HomeControllerTests
     {
         [TestMethod]

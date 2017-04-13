@@ -4,8 +4,8 @@ using angular2prototype.web.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace angular2prototype.web.tests.unit.controllers
-{
-	[TestClass]
+{ 
+	[TestCategory("controller"), TestCategory("unit"), TestClass]
 	public class WeatherControllerTests
 	{
 		[TestMethod]

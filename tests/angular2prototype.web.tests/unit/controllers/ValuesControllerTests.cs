@@ -15,7 +15,8 @@ using angular2prototype.core.models;
 
 namespace angular2prototype.web.tests.unit.controllers
 {
-	[TestClass]
+
+	[TestCategory("controller"), TestCategory("unit"), TestClass]
 	public class ValuesControllerTests
 	{
 		private IValueService _valueService;

@@ -9,7 +9,7 @@ using angular2prototype.core.models;
 
 namespace angular2prototype.services.tests.unit
 {
-	[TestClass]
+	[TestCategory("service"), TestCategory("unit"), TestClass]
 	public class ValueServiceTests
 	{
 		private IValueService _valueService;
