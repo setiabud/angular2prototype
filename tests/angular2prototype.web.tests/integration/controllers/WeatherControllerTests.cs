@@ -36,7 +36,7 @@ namespace angular2prototype.web.tests.integration.controllers
 		public async Task Get_WithCity_ReturnsWeather()
 		{
 			// arrange 
-			string cityName = "jakarta";
+			string cityName = "Jakarta";
 
 			// act
 			var response = await _client.GetAsync($"{ _url }/city/{ cityName }");
