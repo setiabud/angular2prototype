@@ -12,7 +12,7 @@ namespace angular2prototype.web.specs.tests.features
 		[Given(@"the HomePage")]
 		public void GivenTheHomePage()
 		{
-			Browser.WebDriver.Navigate().GoToUrl(ConstantsUtils.Url);
+			
 		}
 
 		[Then(@"I see '(.*)' as the title")]

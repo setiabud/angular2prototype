@@ -30,6 +30,12 @@ namespace angular2prototype.web.specs.tests.common
 			Browser.Teardown();
 		}
 
+		[BeforeScenario]
+		public static void ResetToHome()
+		{
+			Browser.WebDriver.Navigate().GoToUrl(ConstantsUtils.Url);
+		}
+
 		/// <summary>
 		/// Take screenshot in case the test has failed
 		/// </summary>

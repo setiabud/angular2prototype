@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace angular2prototype.web.specs.tests.Features
+namespace angular2prototype.web.specs.tests.features
 {
     using TechTalk.SpecFlow;
     
@@ -49,7 +49,7 @@ namespace angular2prototype.web.specs.tests.Features
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "NavigateHome")))
             {
-                angular2prototype.web.specs.tests.Features.NavigateHomeFeature.FeatureSetup(null);
+                angular2prototype.web.specs.tests.features.NavigateHomeFeature.FeatureSetup(null);
             }
         }
         
