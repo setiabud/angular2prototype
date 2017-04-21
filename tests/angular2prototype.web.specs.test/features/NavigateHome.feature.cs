@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace angular2prototype.web.specs.tests.features
+namespace angular2prototype.web.specs.tests.Features
 {
     using TechTalk.SpecFlow;
     
@@ -18,7 +18,7 @@ namespace angular2prototype.web.specs.tests.features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class NavigateHomeFeature
+    public partial class NavigateToHomeFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -30,9 +30,8 @@ namespace angular2prototype.web.specs.tests.features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "NavigateHome", "\tIn order to navigate to Application HomePage\r\n\tAs a Specflow user\r\n\tI want to ve" +
-                    "rify the title is correct", ProgrammingLanguage.CSharp, new string[] {
-                        "feature"});
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Navigate to Home", "\tAs a application user\r\n\tI want to verify the title is correct", ProgrammingLanguage.CSharp, new string[] {
+                        "specflow"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -47,9 +46,9 @@ namespace angular2prototype.web.specs.tests.features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "NavigateHome")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Navigate to Home")))
             {
-                angular2prototype.web.specs.tests.features.NavigateHomeFeature.FeatureSetup(null);
+                angular2prototype.web.specs.tests.Features.NavigateToHomeFeature.FeatureSetup(null);
             }
         }
         
@@ -71,18 +70,16 @@ namespace angular2prototype.web.specs.tests.features
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Navigate to HomePage")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "NavigateHome")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("feature")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Navigate to Home")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("specflow")]
         public virtual void NavigateToHomePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Navigate to HomePage", new string[] {
-                        "specflow"});
-#line 8
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Navigate to HomePage", ((string[])(null)));
+#line 6
 this.ScenarioSetup(scenarioInfo);
-#line 9
- testRunner.Given("the HomePage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 10
+#line 7
+ testRunner.Given("I am on the page \"/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
  testRunner.Then("I see \'Home Page - angular2prototype\' as the title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

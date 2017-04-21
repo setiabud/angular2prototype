@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b38a3490fc7653db41c0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5161a17167704fd63d6f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9816,7 +9816,7 @@ module.exports = "<h1>Values List/Search</h1>\r\n\r\n<label for=\"city\">Name</l
 /* 69 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Weather Check</h1>\r\n\r\n<label for=\"city\">City</label>\r\n<input type=\"text\" id=\"city\" [(ngModel)]=\"chosenCity\" />\r\n<input type=\"button\" value=\"Get Weather\" (click)=\"getWeather(chosenCity)\" />\r\n\r\n<div *ngIf=\"weather\">\r\n\t<h3>Weather for {{weather.city}}</h3>\r\n\r\n\t<table class=\"table table-bordered table-striped\">\r\n\t\t<thead>\r\n\t\t\t<tr>\r\n\t\t\t\t<th>Temp</th>\r\n\t\t\t\t<th>Summary</th>\r\n\t\t\t</tr>\r\n\t\t</thead>\r\n\t\t<tbody>\r\n\t\t\t<tr>\r\n\t\t\t\t<td>{{weather.temp}}</td>\r\n\t\t\t\t<td>{{weather.summary}}</td>\r\n\t\t\t</tr>\r\n\t\t</tbody>\r\n\t</table>\r\n</div>\r\n";
+module.exports = "<h1>Weather Check</h1>\r\n\r\n<label for=\"city\">City</label>\r\n<input type=\"text\" id=\"city\" [(ngModel)]=\"chosenCity\" />\r\n<input type=\"button\" id=\"getWeather\" value=\"Get Weather\" (click)=\"getWeather(chosenCity)\" />\r\n\r\n<div *ngIf=\"weather\">\r\n\t<h3 class=\"panel-heading\">Weather for {{weather.city}}</h3>\r\n\r\n\t<table class=\"table table-bordered table-striped\">\r\n\t\t<thead>\r\n\t\t\t<tr>\r\n\t\t\t\t<th>Temp</th>\r\n\t\t\t\t<th>Summary</th>\r\n\t\t\t</tr>\r\n\t\t</thead>\r\n\t\t<tbody>\r\n\t\t\t<tr>\r\n\t\t\t\t<td>{{weather.temp}}</td>\r\n\t\t\t\t<td>{{weather.summary}}</td>\r\n\t\t\t</tr>\r\n\t\t</tbody>\r\n\t</table>\r\n</div>\r\n";
 
 /***/ }),
 /* 70 */

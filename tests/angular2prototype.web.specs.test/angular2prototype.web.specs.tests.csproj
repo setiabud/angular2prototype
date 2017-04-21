@@ -70,7 +70,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NavigateHome.feature</DependentUpon>
     </Compile>
-    <Compile Include="features\NavigateHomeSteps.cs" />
+    <Compile Include="features\Weather.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Weather.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +82,10 @@
     <None Include="features\NavigateHome.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>NavigateHome.feature.cs</LastGenOutput>
+    </None>
+    <None Include="features\Weather.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Weather.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

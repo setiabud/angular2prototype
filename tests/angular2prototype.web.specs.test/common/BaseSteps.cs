@@ -31,9 +31,9 @@ namespace angular2prototype.web.specs.tests.common
 		}
 
 		[BeforeScenario]
-		public static void ResetToHome()
+		public static void Reset()
 		{
-			Browser.WebDriver.Navigate().GoToUrl(ConstantsUtils.Url);
+			//Browser.WebDriver.Navigate().GoToUrl(ConstantsUtils.Url);
 		}
 
 		/// <summary>
@@ -55,7 +55,10 @@ namespace angular2prototype.web.specs.tests.common
 		[Given(@"I am on the page ""(.*)""")]
 		public void IAmOnPage(string url)
 		{
-			Browser.GoTo(url);
+			if (url == "/")
+				Browser.GoTo(ConstantsUtils.Url);
+			else
+				Browser.GoTo(url);
 		}
 
 		/// <summary>
@@ -65,7 +68,7 @@ namespace angular2prototype.web.specs.tests.common
 		/// </summary>
 		/// <param name="value">Value</param>
 		/// <param name="field">Name of the HTML Element</param>
-		[When(@"I enter the value""(.*)"" in ""(.*)""")]
+		[When(@"I enter the value ""(.*)"" in ""(.*)""")]
 		public void WhenIEnterValueIn(string value, string field)
 		{
 			By by = GetBy(field);
@@ -91,6 +94,7 @@ namespace angular2prototype.web.specs.tests.common
 			if (by != null)
 			{
 				Browser.WebDriver.FindElement(by).Click();
+				System.Threading.Thread.Sleep(1000);
 			}
 		}
 
@@ -107,11 +111,31 @@ namespace angular2prototype.web.specs.tests.common
 		/// <summary>
 		/// Asserts whether the specified text is displayed on the page.
 		/// </summary>
-		/// <param name="text">Erwarteter Text</param>
+		/// <param name="text">Compared Text</param>
 		[Then(@"the text ""(.*)"" is displayed")]
 		public void ThenTheTextIsDisplayed(string text)
 		{
 			Assert.IsTrue(Browser.WebDriver.PageSource.Contains(text), "The page does not contain the text: " + text);
+		}
+
+		/// <summary>
+		/// Asserts whether the specified text is NOT displayed on the page.
+		/// </summary>
+		/// <param name="text">Compared Text</param>
+		[Then(@"the text ""(.*)"" is NOT displayed")]
+		public void ThenTheTextIsNotDisplayed(string text)
+		{
+			Assert.IsFalse(Browser.WebDriver.PageSource.Contains(text), "The page should not contain the text: " + text);
+		}
+
+		/// <summary>
+		/// Asserts whether the specified text is displayed as the Title of the page.
+		/// </summary>
+		/// <param name="text">Compared Text</param>
+		[Then(@"I see '(.*)' as the title")]
+		public void ThenISeeAsTheTitle(string p0)
+		{
+			Assert.AreEqual(p0, Browser.WebDriver.Title);
 		}
 
 		/// <summary>
