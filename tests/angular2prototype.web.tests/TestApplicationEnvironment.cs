@@ -14,7 +14,7 @@ namespace angular2prototype.web.tests
 {
 	public static class TestApplicationEnvironment 
 	{
-		private const string SolutionName = "angular2prototype.sln";
+		private const string _solutionName = "angular2prototype.sln";
 		private static TestServer _server;
 
 		static TestApplicationEnvironment()
@@ -78,7 +78,7 @@ namespace angular2prototype.web.tests
 			var directoryInfo = new DirectoryInfo(applicationBasePath);
 			do
 			{
-				var solutionFileInfo = new FileInfo(Path.Combine(directoryInfo.FullName, SolutionName));
+				var solutionFileInfo = new FileInfo(Path.Combine(directoryInfo.FullName, _solutionName));
 				if (solutionFileInfo.Exists)
 				{
 					return Path.GetFullPath(Path.Combine(directoryInfo.FullName, solutionRelativePath, projectName));

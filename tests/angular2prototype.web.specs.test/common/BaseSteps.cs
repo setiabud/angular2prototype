@@ -4,6 +4,9 @@ using System.Linq;
 using TechTalk.SpecFlow;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Configuration;
+using System.Globalization;
+using System.Diagnostics;
+using System.IO;
 
 namespace angular2prototype.web.specs.tests.common
 {
@@ -17,6 +20,7 @@ namespace angular2prototype.web.specs.tests.common
 		public static void Setup()
 		{
 			Console.WriteLine("Setup");
+			StartIISExpress();
 			Browser.InitWebDriver();
 		}
 
@@ -28,6 +32,7 @@ namespace angular2prototype.web.specs.tests.common
 		{
 			Console.WriteLine("Teardown");
 			Browser.Teardown();
+			StopIISExpress();
 		}
 
 		[BeforeScenario]
@@ -172,6 +177,42 @@ namespace angular2prototype.web.specs.tests.common
 				}
 			}
 			return by;
+		}
+
+		private static Process _iisExpressProcess;
+		private static void StartIISExpress()
+		{
+			var applicationPath = GetApplicationPath("angular2prototype.web");
+			var programFiles = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+			var arguments = string.Format(CultureInfo.InvariantCulture, "/path:\"{0}\" /port:{1}", applicationPath, "57120");
+
+			var startInfo = new ProcessStartInfo(programFiles + "\\IIS Express\\iisexpress.exe")
+			{
+				WindowStyle = ProcessWindowStyle.Hidden,
+				ErrorDialog = true,
+				LoadUserProfile = true,
+				CreateNoWindow = true,
+				UseShellExecute = false,
+				Arguments = arguments
+			};
+
+			_iisExpressProcess = Process.Start(startInfo);
+		}
+
+		private static void StopIISExpress()
+		{
+			if (_iisExpressProcess.HasExited == false)
+			{
+				_iisExpressProcess.Kill();
+				_iisExpressProcess.Dispose();
+				_iisExpressProcess = null;
+			}
+		}
+
+		private static string GetApplicationPath(string applicationName)
+		{
+			var solutionFolder = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory))));
+			return Path.Combine(solutionFolder, "src", applicationName);
 		}
 	}
 }

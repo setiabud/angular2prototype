@@ -6,7 +6,7 @@ namespace angular2prototype.web.specs.tests.common
 {
 	public class ConstantsUtils
 	{
-		public static string Url = "http://localhost:58184/home";
+		public static string Url = "http://localhost:57120/home";
 		public static string ScreenShotLocation = "c:\\temp\\";
 	}
 
